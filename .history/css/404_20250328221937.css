@@ -1,0 +1,61 @@
+/* Custom Theme variables */
+:root {
+    --nav-bg: #333;
+    --nav-link-color: #fff;
+    --nav-link-hover-bg: #111;
+    --dropdown-bg: #f9f9f9;
+    --active-bg: #675656;
+    --body-text-color: #f5c646;      /* General text color */
+    --heading-text-color: #d4caca;   /* Headings, if desired */
+    --nav-link-color: #fff;
+
+}
+/* Headings */
+h1 {
+    color: var(--heading-text-color);
+    font-size: 50px;
+    text-align: center;
+}
+.desc{
+    color: var(--nav-link-color);
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* large gap between left and right edges */
+    margin-left: 20%;
+    margin-right: 20%;
+}
+/* Body styling */
+body {
+    background-image: url('../img/home.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 15%;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.mi{
+    padding: 20px;
+    font-size: 4em;
+    color: var(--nav-link-color);
+}
+
+
+
+
+
+
+
+

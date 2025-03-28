@@ -1,0 +1,58 @@
+:root {
+    --nav-bg: #B22222;             /* Firebrick red for a bold navigation background */
+    --nav-link-color: #fff;         /* White for clear, contrasting text */
+    --nav-link-hover-bg: #8B0000;    /* Dark red for hover states */
+    --dropdown-bg: #FF8C00;         /* Dark orange for dropdown menus */
+    --active-bg: #FF6347;           /* Tomato red for active elements */
+    --body-text-color: #f5c646;     /* Warm yellow for body text */
+    --heading-text-color: #FFDAB9;  /* Peach puff for soft headings */
+  }
+  ngs */
+h1 {
+    color: var(--heading-text-color);
+    font-size: 50px;
+    text-align: center;
+}
+.desc{
+    color: var(--nav-link-color);
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* large gap between left and right edges */
+    margin-left: 20%;
+    margin-right: 20%;
+}
+/* Body styling */
+body {
+    background-image: url('https://png.pngtree.com/background/20220714/original/pngtree-internet-network-warning-404-error-page-or-file-not-found-for-picture-image_1607205.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 15%;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.mi{
+    padding: 20px;
+    font-size: 4em;
+    color: var(--nav-link-color);
+}
+
+
+
+
+
+
+
+
