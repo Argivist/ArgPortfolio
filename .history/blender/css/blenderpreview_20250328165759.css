@@ -1,0 +1,14 @@
+:root {
+    /* Override color variables */
+    --nav-bg: #1f1f1f;              /* Darker navbar background */
+    --nav-link-color: #d9d9d9;        /* Light gray for nav links */
+    --nav-link-hover-bg: #444;       /* Hover background for nav links */
+    --dropdown-bg: #2a2a2a;          /* Dark dropdown background */
+    --active-bg: #ff8000;            /* Active link background, e.g., signature orange */
+    --text-color: #e0e0e0;           /* General text color if needed */
+    
+    /* You can override any other variables here as desired */
+    --preview-header-bg: var(--nav-bg);
+    --preview-header-color: var(--nav-link-color);
+  }
+  

@@ -1,0 +1,153 @@
+/* Container for preview items arranged in a 3-column grid */
+#previews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Adjust gap between items as needed */
+    padding: 20px;
+    height: fit-content;
+  }
+  @media (max-width: 768px) {
+    #previews {
+      display: block;
+    }
+  }
+  
+  /* Preview Box */
+  .preview-box {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    margin: 50px auto;
+    border: 1px solid var(--preview-box-border-color);
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Remove the transform from the box itself */
+  }
+  @media (max-width: 768px) {
+    .preview-box {
+      height: 100vh;
+    }
+  }
+  
+  /* Hover effect: Zoom out the image (scale down a bit) */
+  .preview-box:hover .preview-image {
+    transform: scale(0.97);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Ensure the image fills the container */
+  .preview-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* or cover, depending on your desired crop */
+    transition: transform 0.3s ease;
+  }
+  
+  /* Header as overlay at the bottom (keeps its color) */
+  .preview-header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--preview-header-bg);
+    color: var(--preview-header-color);
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    /* No hover change – header retains its color */
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: var(--modal-z-index);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: var(--modal-bg-color);
+  }
+  
+  .modal-content {
+    background-color: var(--modal-content-bg);
+    margin: var(--modal-content-margin);
+    padding: var(--modal-content-padding);
+    width: var(--modal-content-width);
+    max-width: var(--modal-content-max-width);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: var(--modal-content-border-radius);
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: var(--close-color);
+    font-size: var(--close-font-size);
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .close:hover {
+    color: var(--close-hover-color);
+  }
+  
+  /* Modal image container */
+  .modal-image-container {
+    flex: 2 1 60%;
+    padding: 10px;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* Modal sidebar */
+  .modal-sidebar {
+    flex: 1 1 35%;
+    padding: 10px;
+    max-height: var(--sidebar-max-height);
+    overflow-y: auto;
+    border-left: var(--sidebar-border-width) solid var(--sidebar-border-color);
+  }
+  
+  .modal-sidebar h2 {
+    margin-top: 0;
+  }
+  
+  .modal-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Extra Images Container */
+  .extra-images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .extra-image {
+    width: var(--extra-image-width);
+    height: auto;
+    border: var(--extra-image-border);
+    border-radius: var(--extra-image-border-radius);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .extra-image:hover {
+    transform: scale(var(--extra-image-hover-scale));
+  }
+  

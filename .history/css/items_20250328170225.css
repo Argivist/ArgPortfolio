@@ -1,0 +1,167 @@
+:root {
+    /* Preview Box Variables */
+    --preview-box-width: 300px;
+    --preview-box-height:300px;
+    --preview-box-margin: 50px auto;
+    --preview-box-border-color: #ccc;
+    --preview-box-border-width: 2px;
+    --preview-box-border-radius: 8px;
+    --preview-box-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --preview-box-hover-scale: 1.03;
+    
+    /* Header Variables */
+    --preview-header-bg: var(--nav-bg, #333);
+    --preview-header-color: var(--nav-link-color, #fff);
+    --preview-header-padding: 10px;
+    --preview-header-font-size: 1.2em;
+    
+    /* Modal Variables */
+    --modal-bg-color: rgba(0, 0, 0, 0.8);
+    --modal-z-index: 200;
+    
+    --modal-content-bg: #fff;
+    --modal-content-margin: 5% auto;
+    --modal-content-padding: 20px;
+    --modal-content-width: 80%;
+    --modal-content-max-width: 1000px;
+    --modal-content-border-radius: 8px;
+    
+    /* Close Button */
+    --close-color: #aaa;
+    --close-hover-color: #000;
+    --close-font-size: 30px;
+    
+    /* Sidebar Variables */
+    --sidebar-border-color: #ccc;
+    --sidebar-border-width: 2px;
+    --sidebar-max-height: 80vh;
+    
+    /* Extra Images */
+    --extra-image-width: 100px;
+    --extra-image-border: 1px solid #ccc;
+    --extra-image-border-radius: 4px;
+    --extra-image-hover-scale: 1.05;
+  }
+  
+  /* Preview Box */
+  .preview-box {
+    width: var(--preview-box-width);
+    height: var(--preview-box-height);
+    margin: var(--preview-box-margin);
+    border: var(--preview-box-border-width) solid var(--preview-box-border-color);
+    border-radius: var(--preview-box-border-radius);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--preview-box-box-shadow);
+    transition: transform 0.3s ease;
+  }
+  
+  .preview-box:hover {
+    transform: scale(var(--preview-box-hover-scale));
+  }
+  
+  .preview-header {
+    background-color: var(--preview-header-bg);
+    color: var(--preview-header-color);
+    text-align: center;
+    padding: var(--preview-header-padding);
+    font-size: var(--preview-header-font-size);
+  }
+  
+  .preview-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: var(--modal-z-index);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: var(--modal-bg-color);
+  }
+  
+  .modal-content {
+    background-color: var(--modal-content-bg);
+    margin: var(--modal-content-margin);
+    padding: var(--modal-content-padding);
+    width: var(--modal-content-width);
+    max-width: var(--modal-content-max-width);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: var(--modal-content-border-radius);
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: var(--close-color);
+    font-size: var(--close-font-size);
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .close:hover {
+    color: var(--close-hover-color);
+  }
+  
+  /* Modal image container */
+  .modal-image-container {
+    flex: 2 1 60%;
+    padding: 10px;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* Modal sidebar */
+  .modal-sidebar {
+    flex: 1 1 35%;
+    padding: 10px;
+    max-height: var(--sidebar-max-height);
+    overflow-y: auto;
+    border-left: var(--sidebar-border-width) solid var(--sidebar-border-color);
+  }
+  
+  .modal-sidebar h2 {
+    margin-top: 0;
+  }
+  
+  .modal-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Extra Images Container */
+  .extra-images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .extra-image {
+    width: var(--extra-image-width);
+    height: auto;
+    border: var(--extra-image-border);
+    border-radius: var(--extra-image-border-radius);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .extra-image:hover {
+    transform: scale(var(--extra-image-hover-scale));
+  }
+  

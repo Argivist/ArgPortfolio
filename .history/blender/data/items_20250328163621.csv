@@ -1,0 +1,3 @@
+mainImage,header,description,otherImagesFolder
+image1.jpg,Header One,"This is the description for image one. It is a longer description that may require scrolling.",folder1
+image2.jpg,Header Two,"This is the description for image two. It provides details about the image.",folder2

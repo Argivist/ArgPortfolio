@@ -1,0 +1,24 @@
+:root {
+      /* Preview Box Colors */
+      --preview-box-border-color: #ccc;
+      --preview-box-mask: rgba(255, 149, 0, 0.678);
+      
+      /* Header Colors */
+      --preview-header-bg: var(--nav-bg, #333);
+      --preview-header-color: var(--nav-link-color, #fff);
+      
+      /* Modal Colors */
+      --modal-bg-color: rgba(0, 0, 0, 0.8);
+      --modal-content-bg: #fff;
+      
+      /* Close Button Colors */
+      --close-color: #aaa;
+      --close-hover-color: #000;
+      
+      /* Sidebar Colors */
+      --sidebar-border-color: #ccc;
+      
+      /* Extra Images Colors */
+      --extra-image-border-color: #ccc;
+}
+

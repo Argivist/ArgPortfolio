@@ -1,0 +1,169 @@
+
+/* Container for preview items arranged in a 3-column grid */
+#previews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Adjust gap between items as needed */
+    padding: 20px;
+    height: fit-content;
+  }
+
+
+/* Preview Box */
+/* Make sure the preview box is positioned relative */
+.preview-box {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    margin: 50px auto;
+    border: 1px solid var(--preview-box-border-color);
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .preview-box:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Ensure the image fills the container */
+  .preview-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Pseudo-element for the mask overlay */
+  .preview-box::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Adjust height as needed */
+    background: var(--preview-box-mask);
+    pointer-events: none; /* Allows clicks to pass through */
+    transition: opacity 0.3s ease;
+  }
+  
+  /* On hover, fade out the mask */
+  .preview-box:hover::before {
+    opacity: 0;
+  }
+  
+  
+  /* Header as overlay at the bottom */
+  .preview-header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    color: var(--preview-header-color); /* using the color variable */
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Remove the opacity mask on hover */
+  .preview-box:hover .preview-header {
+    background-color:var(--preview-box-mask);
+    
+  }
+  
+  
+  /* Modal Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: var(--modal-bg-color);
+  }
+  
+  .modal-content {
+    background-color: var(--modal-content-bg);
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: var(--close-color);
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .close:hover {
+    color: var(--close-hover-color);
+  }
+  
+  /* Modal image container */
+  .modal-image-container {
+    flex: 2 1 60%;
+    padding: 10px;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* Modal sidebar */
+  .modal-sidebar {
+    flex: 1 1 35%;
+    padding: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-left: 2px solid var(--sidebar-border-color);
+  }
+  
+  .modal-sidebar h2 {
+    margin-top: 0;
+  }
+  
+  .modal-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Extra Images Container */
+  .extra-images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .extra-image {
+    width: 100px;
+    height: auto;
+    border: 1px solid var(--extra-image-border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .extra-image:hover {
+    transform: scale(1.05);
+  }
+  
