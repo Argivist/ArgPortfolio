@@ -1,0 +1,118 @@
+/* Custom Theme variables */
+:root {
+    --nav-bg: #333;
+    --nav-link-color: #fff;
+    --nav-link-hover-bg: #111;
+    --dropdown-bg: #f9f9f9;
+    --active-bg: #675656;
+    --body-text-color: #f5c646;      /* General text color */
+    --heading-text-color: #d4caca;   /* Headings, if desired */
+}
+
+
+h1 {
+    color: var(--heading-text-color);
+    font-size: 50px;
+    text-align: center;
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
+}
+
+/* p {
+
+    color: var(--body-text-color);
+    font-size: 30px;
+    text-align: center;
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
+/*} */
+.desc{
+    color: var(--nav-link-color);
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* large gap between left and right edges */
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+body {
+    background-image:url('../img/home.jpeg');
+    background-size:cover;    /* Ensures the image covers the whole screen */
+    background-repeat: no-repeat;  /* Prevents tiling */
+    background-position: center 15%;
+
+    /*  */
+    /* background-position: center;   Centers the image */
+}
+.overlay {
+    position: fixed;
+    /* top: 0; */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: -1; /* Keeps it behind your content */
+}
+
+
+/* Interest */
+
+/* Container: arrange interests in 3 columns, full width */
+.interests {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Optional: limits the overall width */
+    margin: 0 auto; /* Centers the grid */
+    padding: 20px;
+  }
+  
+  /* Each individual interest item */
+  .interest {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd; /* Optional border for visual separation */
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .interest:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+  }
+  
+  /* Style the images inside each interest */
+  .interest img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraph styling */
+  .interest p {
+    margin: 8px 0;
+    font-size: 1em;
+    color: #333;
+  }
+  
+  /* Styling for additional text wrapped in <i> and <p> */
+  .interest i p {
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Responsive: adjust columns on smaller screens */
+  @media (max-width: 768px) {
+    .interests {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .interests {
+      grid-template-columns: 1fr;
+    }
+  }
+  

@@ -1,0 +1,49 @@
+:root {
+    --nav-bg: #f57900;           /* Blender's dark gray background */
+    --nav-link-color: #fff;      /* Light text for contrast */
+    --nav-link-hover-bg: #3d3d3d; /* Hover background */
+    --dropdown-bg: #2c2c2c;       /* Dropdown background */
+    --active-bg: #f1f1f1;         /* Active background */
+    --border-color: #555;         /* Border color */
+    --text-color: #333;           /* Dark text */
+    --nav-link-active-color: #f57900; /* Active link text (Blender's signature orange) */
+}
+
+
+body {
+    background-image:url('../blender/img/blender_bg.jpeg');
+    background-position: center;
+/* background doesnt scroll */
+    background-attachment: fixed;
+
+    background-size:cover;    /* Ensures the image covers the whole screen */
+    background-repeat: no-repeat;  /* Prevents tiling */
+    /* background-position: center;   Centers the image */
+    bottom: 0;
+}
+.overlay {
+    /* position: fixed; */
+    position: absolute;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: -1; /* Keeps it behind your content */
+}
+
+h1{
+    color: var(--nav-bg);
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.desc{
+    color: var(--nav-link-color);
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* large gap between left and right edges */
+    margin-left: 20%;
+    margin-right: 20%;
+}

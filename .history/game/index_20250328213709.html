@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/items.css">
+    <link rel="stylesheet" href="../css/game.css">
+    <link rel="stylesheet" href="css/gamepreview.css">
+
+
+    <title>Hutton Amison-Addy</title>
+
+    <style>
+        body{
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="nav-content"><a href="../../index.html">Home</a></li>
+            <li class="nav-content"><a href="https://www.instagram.com/theworldinoneseye/">Photography</a></li>
+
+            <li class="dropdown nav-content">
+                <a>Contact</a>
+                <ul class="dropdown-content">
+                    <li><a href="https://www.linkedin.com/in/hutton-amison-addy-7b1b3b1b1/">LinkedIn</a></li>
+                    <li><a href="https://www.github.com/Argivist">GitHub</a></li>
+                    <li><a href="mailto:hutton.amison@ashesi.edu.gh">hutton.amison@ashesi.edu.gh</a></li>
+                    <li><a href="mailto:huttonaaddy.public@gmail.com">huttonaaddy.public@gmail.com</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown nav-content active">
+                <a href="#" class="active-text">Game Development</a>
+                <ul class="dropdown-content">
+                    <li><a>Game Development Projects</a></li>
+                    <li class=""><a href="../blender/index.html">Blender</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="padding">
+    </div>
+        <div class="overlay">
+        
+            <!-- aditional context -->
+            <div>
+                <h1>Game Developemnt Projects</h1>
+                <p class="desc">
+                    This page is a reflection of my journey into game development—a fusion of creativity, technology, and storytelling. Games have shaped my passion for computer science and robotics, inspiring me to explore how interactive worlds come to life. Here, I document my experiences, experiments, and projects as I bring dream worlds and narratives into reality.                </p>
+            </div>
+
+
+            <div id="previews"></div>
+
+        </div>
+    
+    
+</body>
+<!-- Include PapaParse from CDN -->
+ <!-- uncomment when ready to edit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+<script src="./js/loadPreviews.js" defer></script>
+
+</html>

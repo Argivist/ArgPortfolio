@@ -1,0 +1,131 @@
+/* Custom Theme variables */
+:root {
+    --nav-bg: #333;
+    --nav-link-color: #fff;
+    --nav-link-hover-bg: #111;
+    --dropdown-bg: #f9f9f9;
+    --active-bg: #675656;
+    --body-text-color: #f5c646;      /* General text color */
+    --heading-text-color: #d4caca;   /* Headings, if desired */
+    --interest-hover: #ffffff50;       /* Hover color for interest items */
+}
+
+
+h1 {
+    color: var(--heading-text-color);
+    font-size: 50px;
+    text-align: center;
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
+}
+
+/* p {
+
+    color: var(--body-text-color);
+    font-size: 30px;
+    text-align: center;
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
+/*} */
+.desc{
+    color: var(--nav-link-color);
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* large gap between left and right edges */
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+body {
+    background-image:url('../img/home.jpeg');
+    background-size:cover;    /* Ensures the image covers the whole screen */
+    background-repeat: no-repeat;  /* Prevents tiling */
+    background-position: center 15%;
+
+    /*  */
+    /* background-position: center;   Centers the image */
+}
+
+/* Root variables for theme colors */
+:root {
+    --nav-link-color: #fff;
+    --interest-hover-bg: rgba(255, 255, 255, 0.8);
+    --interest-text-color: #333;
+}
+
+/* Container for all interests */
+.interests {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Individual interest item */
+.interest {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16 / 9; /* Adjusts height relative to width */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Background images for specific interests */
+.f1 {
+    background-image: url('https://corp.formula1.com/wp-content/uploads/2023/02/GettyImages-1240545798-scaled.jpg');
+}
+.f1 h3{
+    color:red;
+    /* font-size: 30px; */
+}
+.space{
+    background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/iss064e000683.jpg');
+}
+/* https://scalar.chapman.edu/scalar/interior-space---a-visual-exploration-of-the-international-space-station-photographs-by-paolo-nespo/media/Endeavour%20dock%20ISS%20symmetric.jpg */
+
+/* Description container */
+.intdesc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: var(--nav-link-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Title styling */
+.intdesc h3 {
+    margin: 0;
+    font-size: 1.8em;
+    text-align: center;
+}
+.intdesc p{
+    display: none;
+}
+.intdesc:hover p{
+    display: block;
+}
+
+/* Description paragraph */
+
+
+
+/* Hover effects */
+.interest:hover .intdesc {
+    background-color: var(--interest-hover-bg);
+    color: var(--interest-text-color);
+}
+
+.interest:hover .intdesc i {
+    opacity: 1;
+}

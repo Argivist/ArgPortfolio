@@ -1,0 +1,24 @@
+:root {
+      /* Preview Box Colors */
+      --preview-box-border-color: #b3b3b3;
+      --preview-box-mask: rgba(0, 122, 204, 0.2); /* Soft blue glow */
+  
+      /* Header Colors */
+      --preview-header-bg: var(--nav-bg, #ffffff);
+      --preview-header-color: var(--nav-link-color, #333333);
+  
+      /* Modal Colors */
+      --modal-bg-color: rgba(255, 255, 255, 0.9);
+      --modal-content-bg: #e6e6e6;
+  
+      /* Close Button Colors */
+      --close-color: #007acc;
+      --close-hover-color: #ff4500;
+  
+      /* Sidebar Colors */
+      --sidebar-border-color: #b3b3b3;
+  
+      /* Extra Images Colors */
+      --extra-image-border-color: #00bfff;
+  }
+  

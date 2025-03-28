@@ -1,0 +1,24 @@
+:root {
+      /* Preview Box Colors */
+      --preview-box-border-color: #50fa7b;
+      --preview-box-mask: rgba(80, 250, 123, 0.3); /* Neon green glow */
+  
+      /* Header Colors */
+      --preview-header-bg: var(--nav-bg, #000000);
+      --preview-header-color: var(--nav-link-color, #8be9fd);
+  
+      /* Modal Colors */
+      --modal-bg-color: rgba(0, 0, 0, 0.85);
+      --modal-content-bg: #222222;
+  
+      /* Close Button Colors */
+      --close-color: #ff79c6;
+      --close-hover-color: #bd93f9;
+  
+      /* Sidebar Colors */
+      --sidebar-border-color: #444444;
+  
+      /* Extra Images Colors */
+      --extra-image-border-color: #50fa7b;
+  }
+  

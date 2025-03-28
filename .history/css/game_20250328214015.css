@@ -1,0 +1,54 @@
+:root {
+  --nav-bg: #0d0d0d;             /* Near-black background */
+  --nav-link-color: #b3b3b3;      /* Soft gray for readability */
+  --nav-link-hover-bg: #262626;   /* Slightly lighter for hover */
+  --dropdown-bg: #1a1a1a;         /* Darker shade for dropdowns */
+  --active-bg: #333333;           /* Medium gray for active elements */
+  --border-color: #4d4d4d;        /* Subtle metallic border */
+  --text-color: #e6e6e6;          /* Light gray for text */
+  --nav-link-active-color: #e6e600; /* Bright yellow accent */
+  --accent-color: #ff6600;        /* Warm orange for highlights */
+  --secondary-accent: #00ccff;    /* Cool blue for contrast */
+}
+
+  
+
+
+
+body {
+    background-image:url('../game/img/game_bg.jpeg');
+    background-position: center;
+/* background doesnt scroll */
+    background-attachment: fixed;
+
+    background-size:cover;    /* Ensures the image covers the whole screen */
+    background-repeat: no-repeat;  /* Prevents tiling */
+    /* background-position: center;   Centers the image */
+    bottom: 0;
+}
+.overlay {
+    /* position: fixed; */
+    position: absolute;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: -1; /* Keeps it behind your content */
+}
+
+h1{
+    color: var(--nav-bg);
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.desc{
+    color: var(--nav-link-color);
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* large gap between left and right edges */
+    margin-left: 20%;
+    margin-right: 20%;
+}

@@ -1,0 +1,12 @@
+:root {
+    --nav-bg: #1a1a2e;          /* Deep space blue - dark, modern background */
+    --nav-link-color: #e0e0e0;  /* Light gray for readability */
+    --nav-link-hover-bg: #16213e; /* Darker blue for hover */
+    --dropdown-bg: #0f3460;      /* Cool cyberpunk blue for dropdowns */
+    --active-bg: #53354a;        /* Deep reddish-purple for active elements */
+    --border-color: #3a3a52;     /* Subtle blue-gray border */
+    --text-color: #f5f5f5;       /* Almost white for good contrast */
+    --nav-link-active-color: #ff7b00; /* Neon orange for highlights */
+    --accent-color: #ff007f;     /* Hot pink for interactive elements */
+    --secondary-accent: #00f2ff; /* Neon cyan for extra cyber feel */
+}
