@@ -11,39 +11,17 @@
 
 
 body {
-    background-image:url('../blender/img/blender_bg.jpeg');
-    background-position: center;
-/* background doesnt scroll */
-    background-attachment: fixed;
-
+    background-image:url('../img/home.jpeg');
     background-size:cover;    /* Ensures the image covers the whole screen */
     background-repeat: no-repeat;  /* Prevents tiling */
     /* background-position: center;   Centers the image */
-    bottom: 0;
 }
 .overlay {
-    /* position: fixed; */
-    position: absolute;
+    position: fixed;
+    /* top: 0; */
     left: 0;
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
     z-index: -1; /* Keeps it behind your content */
-}
-
-h1{
-    color: var(--nav-bg);
-    font-size: 50px;
-    text-align: center;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.desc{
-    color: var(--nav-link-color);
-    font-size: 30px;
-    text-align: center;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    /* large gap between left and right edges */
-    margin-left: 20%;
-    margin-right: 20%;
 }

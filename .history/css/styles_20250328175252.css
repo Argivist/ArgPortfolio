@@ -1,0 +1,14 @@
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.padding{
+    /* height: 35px; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height:50px;
+}

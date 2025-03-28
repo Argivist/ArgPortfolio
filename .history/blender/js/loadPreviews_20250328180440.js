@@ -95,79 +95,7 @@ function createPreview(row) {
 /**
  * Opens a modal window displaying the expanded image and sidebar.
  * @param {Object} row - The CSV row data.
-//  */
-// function openModal(row) {
-//   // Create the modal container
-//   const modal = document.createElement('div');
-//   modal.classList.add('modal');
-
-//   // Create modal content container
-//   const modalContent = document.createElement('div');
-//   modalContent.classList.add('modal-content');
-
-//   // Create the close button
-//   const closeBtn = document.createElement('span');
-//   closeBtn.classList.add('close');
-//   closeBtn.innerHTML = '&times;';
-//   closeBtn.addEventListener('click', () => {
-//     modal.style.display = 'none';
-//     modal.remove();
-//   });
-//   modalContent.appendChild(closeBtn);
-
-//   // Create the image container for the main image
-//   const imageContainer = document.createElement('div');
-//   imageContainer.classList.add('modal-image-container');
-//   const modalImage = document.createElement('img');
-//   modalImage.classList.add('modal-image');
-//   modalImage.src = `content/${row.mainImage}/main.jpg`;
-//   modalImage.alt = row.header;
-//   imageContainer.appendChild(modalImage);
-//   modalContent.appendChild(imageContainer);
-
-//   // Create the sidebar for header, description, and extra images
-//   const modalSidebar = document.createElement('div');
-//   modalSidebar.classList.add('modal-sidebar');
-  
-//   // Sidebar Header
-//   const sidebarHeader = document.createElement('h2');
-//   sidebarHeader.textContent = row.header;
-//   modalSidebar.appendChild(sidebarHeader);
-  
-//   // Description
-//   const descriptionDiv = document.createElement('div');
-//   descriptionDiv.classList.add('modal-description');
-//   const descriptionPara = document.createElement('p');
-//   descriptionPara.textContent = row.description;
-//   descriptionDiv.appendChild(descriptionPara);
-//   modalSidebar.appendChild(descriptionDiv);
-  
-//   // Extra Images Container
-//   const extraImagesContainer = document.createElement('div');
-//   extraImagesContainer.classList.add('extra-images-container');
-//   // Load extra images recursively
-//   loadExtraImages(row.otherImagesFolder, 1, extraImagesContainer);
-  
-//   // Append the extra images container to the sidebar
-//   modalSidebar.appendChild(extraImagesContainer);
-//   modalContent.appendChild(modalSidebar);
-
-//   // Append the modal content to the modal container
-//   modal.appendChild(modalContent);
-//   // Append the modal to the body
-//   document.body.appendChild(modal);
-
-//   // Display the modal
-//   modal.style.display = 'block';
-
-//   // Optional: Close the modal when clicking outside of the modal content
-//   modal.addEventListener('click', (event) => {
-//     if (event.target === modal) {
-//       modal.style.display = 'none';
-//       modal.remove();
-//     }
-//   });
-// }
+ */
 function openModal(row) {
   // Create the modal container
   const modal = document.createElement('div');
@@ -187,40 +115,25 @@ function openModal(row) {
   });
   modalContent.appendChild(closeBtn);
 
-  // Create the media container for the main media (image or video)
-  const mediaContainer = document.createElement('div');
-  mediaContainer.classList.add('modal-image-container');
-
-  // Check the media type: if "video", create a video element; otherwise, create an image element
-  if (row.mediaType && row.mediaType.toLowerCase() === 'video') {
-    const modalVideo = document.createElement('video');
-    modalVideo.classList.add('modal-video');
-    modalVideo.controls = true;
-    // Adjust the path as needed (e.g., folder and file name)
-    const source = document.createElement('source');
-    source.src = `content/${row.mainMedia}/main.mp4`;
-    source.type = 'video/mp4';
-    modalVideo.appendChild(source);
-    mediaContainer.appendChild(modalVideo);
-  } else {
-    const modalImage = document.createElement('img');
-    modalImage.classList.add('modal-image');
-    // Adjust the path as needed (e.g., folder and file name)
-    modalImage.src = `content/${row.mainMedia}/main.jpg`;
-    modalImage.alt = row.header;
-    mediaContainer.appendChild(modalImage);
-  }
-  modalContent.appendChild(mediaContainer);
+  // Create the image container for the main image
+  const imageContainer = document.createElement('div');
+  imageContainer.classList.add('modal-image-container');
+  const modalImage = document.createElement('img');
+  modalImage.classList.add('modal-image');
+  modalImage.src = `content/${row.mainImage}/main.jpg`;
+  modalImage.alt = row.header;
+  imageContainer.appendChild(modalImage);
+  modalContent.appendChild(imageContainer);
 
   // Create the sidebar for header, description, and extra images
   const modalSidebar = document.createElement('div');
   modalSidebar.classList.add('modal-sidebar');
-
+  
   // Sidebar Header
   const sidebarHeader = document.createElement('h2');
   sidebarHeader.textContent = row.header;
   modalSidebar.appendChild(sidebarHeader);
-
+  
   // Description
   const descriptionDiv = document.createElement('div');
   descriptionDiv.classList.add('modal-description');
@@ -228,15 +141,20 @@ function openModal(row) {
   descriptionPara.textContent = row.description;
   descriptionDiv.appendChild(descriptionPara);
   modalSidebar.appendChild(descriptionDiv);
-
-  // Extra Images Container (remains unchanged)
+  
+  // Extra Images Container
   const extraImagesContainer = document.createElement('div');
   extraImagesContainer.classList.add('extra-images-container');
+  // Load extra images recursively
   loadExtraImages(row.otherImagesFolder, 1, extraImagesContainer);
+  
+  // Append the extra images container to the sidebar
   modalSidebar.appendChild(extraImagesContainer);
-
   modalContent.appendChild(modalSidebar);
+
+  // Append the modal content to the modal container
   modal.appendChild(modalContent);
+  // Append the modal to the body
   document.body.appendChild(modal);
 
   // Display the modal
