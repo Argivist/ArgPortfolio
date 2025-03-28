@@ -1,4 +1,4 @@
 mainMedia,header,description,otherImagesFolder,mediaType,format
 plane,"F-22 Mockup","This is the description for image one. It is a longer description that may require scrolling.",plane,,
-drone,"Submersible",This is the description for image two.<br/> It provides details about the image.,drone,,
+drone,"Submersible","This is the description for image two.\n It provides details about the image.",drone,,
 armini-214,"Armini-217 Assault Rifle","This is the description for image two. It provides details about the image.",armini-214,,

@@ -4,7 +4,7 @@ body{
     padding: 0;
 }
 
- p {
+.modal-description p {
     white-space: pre-line; /* preserves newlines, but collapses extra spaces */
   }
   

@@ -224,9 +224,8 @@ function openModal(row) {
   // Description
   const descriptionDiv = document.createElement('div');
   descriptionDiv.classList.add('modal-description');
-  const descriptionPara = document.createElement('p');
-  // descriptionPara.textContent = row.description;
-  descriptionPara.innerHTML = row.description;
+  const descriptionPara = document.createElement('pre');
+  descriptionPara.textContent = row.description;
   descriptionDiv.appendChild(descriptionPara);
   modalSidebar.appendChild(descriptionDiv);
 

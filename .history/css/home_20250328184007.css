@@ -5,42 +5,30 @@
     --nav-link-hover-bg: #111;
     --dropdown-bg: #f9f9f9;
     --active-bg: #675656;
-    --body-text-color: #f5c646;      /* General text color */
-    --heading-text-color: #d4caca;   /* Headings, if desired */
+    --body-text-color: #333;      /* General text color */
+    --heading-text-color: #222;   /* Headings, if desired */
 }
 
 
 h1 {
-    color: var(--heading-text-color);
+    color: --heading-text-color;
     font-size: 50px;
     text-align: center;
     /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
 }
 
-/* p {
-
-    color: var(--body-text-color);
+p {
+    color: --body-text-color;
     font-size: 30px;
     text-align: center;
     /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
-/*} */
-.desc{
-    color: var(--nav-link-color);
-    font-size: 30px;
-    text-align: center;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    /* large gap between left and right edges */
-    margin-left: 20%;
-    margin-right: 20%;
 }
+
 
 body {
     background-image:url('../img/home.jpeg');
     background-size:cover;    /* Ensures the image covers the whole screen */
     background-repeat: no-repeat;  /* Prevents tiling */
-    background-position: center 15%;
-
-    /*  */
     /* background-position: center;   Centers the image */
 }
 .overlay {
