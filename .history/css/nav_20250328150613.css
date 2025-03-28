@@ -1,0 +1,78 @@
+/* NAV Content and Dropdown */
+.nav-content {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative; /* For proper absolute positioning of its child */
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute; /* Changed from relative to absolute */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Nav Stylisation */
+nav {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* bottom: auto; */
+    width: 100vw;
+    z-index: 100;
+    margin: 0;
+    align-items: center;
+}
+.padding {
+    height: 50px;
+}
+
+/* nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-left: 50%;
+    transform: translateX(-50%);
+} */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 50%;
+    /* transform: translateX(-50%); */
+}
+
+.dropdown ul li{
+    width: 100%;
+}
+
+nav ul li {
+    display: inline-block; /* Better control than 'inline' */
+    margin: 0;
+    /* width: 100%; */
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}

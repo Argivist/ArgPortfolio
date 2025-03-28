@@ -1,0 +1,75 @@
+/* NAV Content and Dropdown */
+.nav-content {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative; /* Ensures the dropdown positions correctly */
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Nav Stylisation */
+nav {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for better alignment */
+    justify-content: center; /* Centers nav items */
+}
+
+nav ul li {
+    position: relative; /* Needed for absolute positioning of dropdown */
+    display: inline-block;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Ensure dropdown items are aligned correctly */
+.dropdown-content li {
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content li a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ddd;
+}

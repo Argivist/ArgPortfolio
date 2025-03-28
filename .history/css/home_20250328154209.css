@@ -1,0 +1,25 @@
+h1{
+    color: red;
+    font-size: 50px;
+    text-align: center;
+}
+p{
+    color: blue;
+    font-size: 30px;
+    text-align: center;
+}
+body {
+    background-image: url('https://scontent-los2-1.cdninstagram.com/v/t51.29350-15/314704081_1519577231797297_1299484128567017044_n.webp?stp=dst-jpg_e35_s1080x1080_tt6&_nc_ht=scontent-los2-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2QGguqHch-StKO28TNUH5Uy9ToAZSXpGBqyY3bERdvZBMe1yZAeVMga1Sj8onmYTOug&_nc_ohc=hg3JUl9vGAcQ7kNvgFG4Y9b&_nc_gid=gpMRA4Nrysmha1xdKWw3eA&edm=AGenrX8BAAAA&ccb=7-5&oh=00_AYEzgpYm2FMniErFPaIxRVs2QNoQpFKuEe4LoojA_H5TJA&oe=67ECA3CF&_nc_sid=ed990e');
+    background-size: cover;        /* Ensures the image covers the whole screen */
+    background-repeat: no-repeat;  /* Prevents tiling */
+    background-position: center;   /* Centers the image */
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: -1; /* Keeps it behind your content */
+}

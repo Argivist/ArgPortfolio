@@ -1,0 +1,7 @@
+:root {
+    --nav-bg: #333;
+    --nav-link-color: #fff;
+    --nav-link-hover-bg: #111;
+    --dropdown-bg: #f9f9f9;
+    --active-bg: #675656;
+}

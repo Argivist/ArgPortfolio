@@ -1,0 +1,85 @@
+/* NAV Content and Dropdown */
+.nav-content {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative; /* For proper absolute positioning of its child */
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute; /* This makes it overlay other elements without affecting layout */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Nav Stylisation */
+nav {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+    display: flex;
+    justify-content: center;  /* Centers the nav content horizontally */
+    align-items: center;      /* Vertically centers items */
+    margin: 0;
+}
+
+/* Reserve space for the fixed navbar */
+.padding {
+    height: 35px;  /* Adjust this value to match your navbar's height */
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Nav List Styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    background-color: #333;
+}
+
+/* Nav Links */
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Optional: Ensure dropdown list items take full width */
+.dropdown ul li {
+    width: 100%;
+}
+
+.active{
+    background-color: #111;
+    color: white;
+    
+}
