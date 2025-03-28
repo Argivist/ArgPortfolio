@@ -110,9 +110,6 @@ body {
 .sharedKnowledge{
     background-image: url('https://www.kpsol.com/wp-content/uploads/2022/10/benefits-of-knowledge-sharing.png');
 }
-.manymore{
-    background-image: url('https://images.crutchfieldonline.com/ImageBank/v20220512113800/ImageHandler/scale/978/978/core/learn/article/1111/1111-ocular.jpg');
-}
 
 
 /* Description container */
@@ -183,12 +180,8 @@ body {
 .nature:hover .intdesc {
     background-color: rgba(0, 255, 255, 0.58);
 }
-.sharedKnowledge:hover .intdesc {
-    background-color: rgba(117, 224, 228, 0.829);
-}
-.manymore:hover .intdesc {
-    background-color: rgba(0, 38, 255, 0.58);
-}
+
+
 
 
 /* ########################## */
